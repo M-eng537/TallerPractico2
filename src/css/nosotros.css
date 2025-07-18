@@ -1,0 +1,311 @@
+.seccion-nosotros {
+  background-color: #2a2c2f;
+  color: #00b895;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 184, 149, 0.3);
+  font-family: "Montserrat", sans-serif;
+}
+.contenido-nosotros {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+}
+.titulo-nosotros {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #61ffe3;
+}
+.parrafo-nosotros {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #b2f4e6;
+  font-weight: 400;
+}
+.carrusel-principal {
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #2a2c2f;
+  box-shadow: 0 0 15px rgba(0, 184, 149, 0.3);
+  margin: 0 auto;
+}
+#carrusel-imagenes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.elemento-carrusel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  border-radius: 12px;
+  overflow: hidden;
+  user-select: none;
+  background-color: #2a2c2f;
+  z-index: 1;
+}
+.elemento-carrusel.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: absolute;
+  z-index: 10;
+}
+.imagen-carrusel {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
+  user-select: none;
+  display: block;
+}
+.boton-previo,
+.boton-siguiente {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  font-size: 2.8rem;
+  background-color: #00b895;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  box-shadow: 0 0 8px #00b895;
+  opacity: 0.85;
+}
+.boton-previo:hover,
+.boton-siguiente:hover {
+  background-color: #61ffe3;
+  box-shadow: 0 0 12px #61ffe3;
+}
+.boton-previo {
+  left: 12px;
+}
+.boton-siguiente {
+  right: 12px;
+}
+.indicadores-carrusel {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 20;
+}
+.indicadores-carrusel button {
+  width: 12px;
+  height: 12px;
+  background-color: #444;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.indicadores-carrusel button:hover,
+.indicadores-carrusel button.active {
+  background-color: #00b895;
+}
+@media (max-width: 768px) {
+  .carrusel-principal {
+    height: 320px;
+  }
+  .boton-previo,
+  .boton-siguiente {
+    font-size: 2.2rem;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 480px) {
+  .carrusel-principal {
+    height: 250px;
+  }
+  .boton-previo,
+  .boton-siguiente {
+    font-size: 1.8rem;
+    padding: 6px 10px;
+  }
+}
+.seccion-principal {
+  padding: 3rem 1rem;
+  max-width: 960px;
+  margin: auto;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.animacion-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer-scroll 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+@keyframes aparecer-scroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.linea-tiempo {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 4px solid #00b895;
+}
+.elemento-tiempo {
+  position: relative;
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease;
+}
+.elemento-tiempo:hover {
+  transform: scale(1.01);
+}
+.icono-tiempo {
+  position: absolute;
+  left: -1.875rem;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #00b895;
+  border-color: #2a2c2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #fff;
+  z-index: 10;
+}
+.titulo-tiempo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 0.25rem;
+}
+.tiempo {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+.etiqueta-nueva {
+  margin-left: 0.5rem;
+  background-color: #065f46;
+  color: #61ffe3;
+  font-size: 0.875rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.enlace-detalles {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #61ffe3;
+  text-decoration: none;
+}
+.enlace-detalles:hover {
+  color: #61ffe3;
+  text-decoration: none;
+}
+.svg-flecha {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+.svg-icono {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #61ffe3;
+}
+.contenedor-testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #4caf50;
+}
+.sombra-borde {
+  box-shadow: 0 4px 15px rgba(0, 184, 149, 0.25);
+}
+.testimonio {
+  background-color: #f5fdfa;
+  border-radius: 10px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 184, 149, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.testimonio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 184, 149, 0.35);
+}
+.texto-testimonio {
+  color: #1c1c1c;
+  margin-bottom: 1.3rem;
+}
+.titulo-testimonio {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #007a44;
+  margin-bottom: 0.5rem;
+}
+.parrafo-testimonio {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2c2c2c;
+  font-style: italic;
+}
+.autor-testimonio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.foto-autor {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 184, 149, 0.5);
+}
+.info-autor {
+  text-align: left;
+  color: #1c1c1c;
+}
+.info-autor > div:first-child {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #007a44;
+}
+.cargo-autor {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  margin-top: 2px;
+}
+@media (max-width: 768px) {
+  .contenedor-testimonios {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: 1rem;
+  }
+}

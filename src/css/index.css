@@ -1,0 +1,317 @@
+main,
+section {
+  background-color: #ffffff;
+}
+.bgPrincipal {
+  position: relative;
+  background-image: url("../img/image/img-index3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  z-index: 0;
+  overflow: hidden;
+}
+.bgPrincipal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.btn-principal1 {
+  margin: 10px;
+  background-color: #009178;
+  color: #e0faf7;
+}
+.btn-principal1:hover {
+  background-color: #00b895;
+}
+.btn-principal2 {
+  margin: 10px;
+  border: 2px solid #00b895;
+  color: #00b895;
+}
+.btn-principal2:hover {
+  background-color: #e0faf7;
+}
+.m-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 30px 10px;
+  justify-items: center;
+}
+.card-contenedor {
+  border: 1px outset #00b895;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  text-align: justify;
+}
+.card-contenedor h5 {
+  font-size: 22px;
+  text-decoration: none;
+  color: #2a2c2f;
+  font-weight: bold;
+}
+.card-contenedor a {
+  text-decoration: none;
+}
+.btn-noticias {
+  background-color: #009178;
+  color: #e0faf7;
+}
+.btn-noticias:hover {
+  background-color: #00b895;
+}
+.preguntas-sect {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+}
+.preguntas-cont {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.preguntas-video {
+  flex: 1 1 600px;
+}
+.video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.preguntas-conte {
+  flex: 1 1 500px;
+}
+.preguntas-tit {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+.pregunta {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.pregunta summary {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.pregunta summary::marker {
+  display: none;
+}
+.pregunta[open] {
+  background-color: #e5f7f1;
+  border-color: #34d399;
+}
+#formulario-correo {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.input-correo {
+  padding: 0.625rem 1rem;
+  width: 100%;
+  border: 1px solid #00b895;
+  border-radius: 8px;
+  color: #2a2c2f;
+  font-size: 1rem;
+  outline: none;
+  background-color: #ffffff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.input-correo::placeholder {
+  color: #a0a0a0;
+}
+.input-correo:focus {
+  border-color: #00b895;
+  box-shadow: 0 0 0 2px rgba(0, 185, 149, 0.2);
+}
+.input-correo.error {
+  border-color: #dc2626; /* rojo */
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.3);
+}
+#btn-mostrar-modal {
+  background-color: #00b895;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#btn-mostrar-modal:hover {
+  background-color: #009e81;
+  transform: translateY(-1px);
+}
+#btn-mostrar-modal:active {
+  transform: scale(0.97);
+}
+#spinner {
+  border-top-color: transparent;
+  border-left-color: white;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+.modal-oculto {
+  display: none;
+}
+.modal-visible {
+  display: flex !important;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-contenido {
+  background-color: #ffffff;
+  color: #2a2c2f;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.modal-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+}
+.modal-cabecera h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.btn-cerrar-modal {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}
+.btn-cerrar-modal:hover {
+  color: #000;
+}
+.modal-cuerpo {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.modal-pie {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.btn-principal3 {
+  background-color: #00b895;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 184, 149, 0.5);
+}
+.btn-principal3:hover {
+  background-color: #009f7f;
+  box-shadow: 0 6px 8px rgba(0, 159, 127, 0.7);
+}
+.btn-principal4 {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  box-shadow: none;
+}
+.btn-principal4:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+  color: #111827;
+}
+@media (min-width: 640px) {
+  #formulario-correo .flex {
+    flex-direction: row;
+  }
+}
+@media (max-width: 480px) {
+  .m-contenedor {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+  .m-contenedor {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .bgPrincipal {
+    height: 400px;
+  }
+}
+@media (min-width: 2560px) {
+  .bgPrincipal {
+    height: 400px;
+  }
+  .m-contenedor {
+    grid-template-columns: repeat(2fr 2fr 2fr);
+    gap: 30px;
+    padding: 2rem;
+  }
+  .card-contenedor {
+    max-width: 400px;
+    padding: 20px;
+  }
+  .preguntas-cont {
+    max-width: 1800px;
+    gap: 8rem;
+  }
+  .textP h1 {
+    font-size: 4.5rem;
+  }
+  .textP p {
+    font-size: 1.75rem;
+  }
+  .btn-principal1,
+  .btn-principal2 {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
+}

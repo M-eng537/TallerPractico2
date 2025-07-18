@@ -1,0 +1,204 @@
+.seccion-dispositivos {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+.titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00b895;
+  text-shadow: 0 0 6px rgba(0, 184, 149, 0.4);
+}
+.descripcion-dispositivos {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  padding: 16px;
+  background-color: rgba(42, 44, 47, 0.8);
+  border-left: 4px solid #00b895;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 184, 149, 0.15);
+}
+.contenedor-maquetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.mockup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mockup.celular {
+  border: 14px solid #333;
+  border-radius: 2.5rem;
+  width: 300px;
+  height: 600px;
+  background-color: #1f1f1f;
+  overflow: hidden;
+}
+.mockup.celular .pantalla img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mockup.imac .pantalla {
+  border-radius: 1rem 1rem 0 0;
+  background-color: #1f1f1f;
+  overflow: hidden;
+  width: 100%;
+  max-width: 512px;
+  height: 294px;
+  border: 16px solid #333;
+}
+.mockup.imac .pantalla img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mockup.imac .base {
+  width: 100%;
+  max-width: 512px;
+  height: 42px;
+  background-color: #333;
+  border-radius: 0 0 1rem 1rem;
+}
+.mockup.imac .soporte {
+  width: 83px;
+  height: 55px;
+  background-color: #333;
+  border-radius: 0 0 1rem 1rem;
+  margin-top: -8px;
+}
+.img-light {
+  display: block;
+}
+@media (max-width: 768px) {
+  .mockup.celular {
+    width: 240px;
+    height: 480px;
+  }
+  .mockup.imac .pantalla {
+    height: 172px;
+  }
+  .mockup.imac .base {
+    height: 24px;
+  }
+  .mockup.imac .soporte {
+    height: 40px;
+  }
+}
+.seccion-planes {
+  padding: 50px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #b2f4e6;
+}
+.contenedor-planes {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.plan {
+  background-color: #1c1f22;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 184, 149, 0.4);
+  padding: 30px 25px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+}
+.plan:hover {
+  transform: translateY(-8px);
+  border-color: #00b895;
+}
+.plan-recomendado {
+  border-color: #61ffe3;
+  box-shadow: 0 0 30px #61ffe3;
+}
+.titulo-plan {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #61ffe3;
+}
+.precio-plan {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 25px;
+  color: #00b895;
+}
+.simbolo-moneda {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.cantidad {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.periodo {
+  font-size: 1.2rem;
+  color: #7fada3;
+  margin-left: 6px;
+}
+.caracteristicas-plan {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #b2f4e6;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.no-incluido {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: #4a6c62;
+}
+.boton-plan {
+  background-color: #00b895;
+  color: #1c1f22;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.boton-plan:hover {
+  background-color: #008c6a;
+}
+.boton-principal {
+  background-color: #61ffe3;
+  color: #1c1f22;
+}
+.boton-principal:hover {
+  background-color: #3edcc1;
+}
+@media (max-width: 960px) {
+  .contenedor-planes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+}
